@@ -1,0 +1,12 @@
+{
+  "name": "cndStream",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cndStream",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "Stream m3u8"
+}

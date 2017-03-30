@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cndStream"
+    version="1.0.0">
+    <name>CND STREAM</name>
+    <description>Stream m3u8 playlists using native player</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <!-- android -->
+    <platform name="android">
+     <framework src="src/android/custom.gradle" custom="true" type="gradleReference" />
+      <config-file target="AndroidManifest.xml" parent="/*">
+    <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
+      <js-module src="www/plugin.js" name="plugin">
+     
+     
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="cndStream" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="cndStream">
+          <param name="android-package" value="com.example.cndStream" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/example/cndStream.java" target-dir="src/com/example/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+     <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+      <dict>
+          <key>NSAllowsArbitraryLoads</key>
+          <true/>
+      </dict>
+  </config-file>
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="cndStream" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="cndStream">
+                <param name="ios-package" value="cndStream" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/cndStream.h" />
+        <source-file src="src/ios/cndStream.m" />
+    </platform>
+</plugin>
