@@ -4,7 +4,7 @@ cndStream
 This is a simple plugin to play audio from HLS m3u8 playlists on both iOS and Android.
 
 
-install: cordova plugin add _path_to_plugin_folder
+install: cordova plugin add https://github.com/condor304/cndstream.git
 
 Usage:
 
@@ -23,3 +23,4 @@ window.cndStream.stop();
 
 
 
+NOTE: it works only on device or simulator - not on browser
