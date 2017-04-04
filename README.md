@@ -20,7 +20,9 @@ Stop:
 
 window.cndStream.stop();
 
+Reset:
 
+window.cndStream.reset();
 
 
 NOTE: it works only on device or simulator - not on browser
