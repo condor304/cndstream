@@ -10,6 +10,10 @@ var cndStream = {
    pause: function(cb) {
     exec(cb, null, PLUGIN_NAME, 'pause',[]);
   },
+
+     reset: function(cb) {
+    exec(cb, null, PLUGIN_NAME, 'reset',[]);
+  },
  
   play: function(videoLink, cb){
 

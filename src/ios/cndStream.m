@@ -33,6 +33,13 @@
     
 }
 
+-(void)reset:(CDVInvokedUrlCommand *)command {
+
+
+    [self.moviePlayer stop];
+    
+}
+
 
 -(void)play:(CDVInvokedUrlCommand *)command {
  NSString* videoUrl = [command.arguments objectAtIndex:0];

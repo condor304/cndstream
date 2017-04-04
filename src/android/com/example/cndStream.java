@@ -64,6 +64,12 @@ public class cndStream extends CordovaPlugin {
 
     }
 
+     public void reset(){
+        videoPlayer.pause();
+        videoPlayer.seekTo(0);
+        videoPlayer.release();
+    }
+
     public void pauseAudio(){
         videoPlayer.pause();
     }
@@ -84,6 +90,9 @@ public class cndStream extends CordovaPlugin {
     }
      else if(action.equals("pause")){
       pauseAudio();
+     }
+       else if(action.equals("reset")){
+      reset();
      }
       else if(action.equals("stop")){
         stopAudio();
